@@ -1,0 +1,63 @@
+---
+interface Props {
+    logo: string;
+    title: string;
+    description: string;
+    startDate: string;
+    endDate: string;
+    company: string;
+    url: string;
+}
+
+const { logo, title, description, startDate, endDate, company, url } = Astro.props;
+---
+
+<li class="experience">
+    <a href={url} rel="noopener noreferrer" target="_blank">
+        <div class="top-row">
+            <img src={logo} alt={company} />
+            <h1>{title} at {company}</h1>
+            <span>{startDate} - {endDate}</span>
+        </div>
+        <div class="bottom-row">
+            {description}
+        </div>
+    </a>
+</li>
+
+<style>
+    .experience {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+    .experience > a {
+        text-decoration: none;
+    }
+    .top-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .top-row > img {
+        width: 35px;
+        height: 35px;
+    }
+    .top-row > h1 {
+        padding-left: 1em;
+        font-size: 1.2rem;
+        color: white;
+    }
+    .top-row > span {
+        font-size: .8rem;
+        color: var(--secondary-text);
+        margin-left: auto;
+    }
+    .bottom-row {
+        width: 100%;
+        font-size: .8rem;
+        color: var(--secondary-text);
+    }
+</style>

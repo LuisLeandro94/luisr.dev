@@ -1,0 +1,29 @@
+---
+interface Props {
+    round: boolean;
+    image: string;
+    href: string;
+    description: string;
+}
+
+const {round, image, href, description} = Astro.props;
+---
+<div class={round ? "round-wrapper" : ""}>
+    <a href={href}>
+        <img src={image} alt={description} />
+    </a>
+</div>
+<style>
+    .round-wrapper {
+        margin: auto;
+        position: relative; 
+        width: 250px; 
+        height: 250px; 
+        overflow: hidden; 
+        border-radius: 50%;
+    }
+    .round-wrapper img {
+        width: 100%; 
+        height: auto; 
+    }
+</style>

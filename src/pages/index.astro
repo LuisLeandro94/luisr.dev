@@ -1,0 +1,224 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import RoundImage from '../components/RoundImage.astro';
+import Button from '../components/Button.astro';
+import Experience from '../components/Experience.astro';
+import { Image } from 'astro:assets';
+import signature from '../../public/signature2.png'
+import Social from '../components/Social.astro';
+import { Icon } from 'astro-icon/components'
+---
+
+<Layout title="Luis R > Frontend Developer">
+	<header class="header">
+		<div class="signature">
+			<Image src={signature} alt="Luis R. Signature"></Image>
+		</div>
+		<ul role="list" class="section-link-list">
+			<li class="section-el">
+				<a href="" class="section-link">Home</a>
+			</li>
+			<li class="section-el">
+				<a href="" class="section-link">Projects</a>
+			</li>
+			<li class="section-el">
+				<a href="" class="section-link">Experience</a>
+			</li>
+			<li class="section-el">
+				<a href="" class="section-link">Contact</a>
+			</li>
+		</ul>
+		<div style="width: 33%;"></div>
+	</header>
+	<main>
+		<RoundImage href='https://www.linkedin.com/in/luisleandro94' image='/public/luis.JPG' description='Luis Ribeiro Github' round={true} />
+		<h1>I do code and make content <span class="text-gradient">about it!</span></h1>
+		<p class="about">
+			I am a seasoned full-stack software engineer with over 3 years of professional experience, specializing in front-end development.
+			<br />
+			My expertise lies in crafting beautiful, pixel-perfect websites and mobile apps.
+		</p>
+		<div class="button-container">
+			<Button href='https://www.github.com/luisleandro94' type='primary' text='Get in Touch' />
+			<Button href='/public/luis.JPG' action='download' type='secondary' text='Download CV' />
+		</div>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://docs.astro.build/"
+				title="Documentation"
+				image='/public/luis.JPG'
+			/>
+			<Card
+				href="https://astro.build/integrations/"
+				image='/public/luis.JPG'
+				title="Integrations"
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				image='/public/luis.JPG'
+				title="Themes"
+			/>
+			<Card
+				href="https://astro.build/chat/"
+				image='/public/luis.JPG'
+				title="Community"
+			/>
+		</ul>
+		<h1 class="section-title">Experience</h1>
+		<ul role="list" style="padding: 0;">
+			<Experience url='https://www.codepoint.pt' logo='/public/codepoint.png' title='Junior Fullstack Developer' description='As a Software Engineer at Codepoint, I developed and maintained frontend interfaces using React for diverse client applications. I collaborated on full-stack projects with C#, Blazor, Azure Functions, and MySQL, ensuring seamless integration between frontend and backend systems. I designed and implemented APIs to enhance application functionality. In a dynamic environment, I delivered high-quality, responsive web solutions and worked with designers on UI/UX enhancements, embracing Agile methodology for efficient project management.' startDate='Sep 2021' endDate='Mar 2023' company='Codepoint' />
+			<Experience url='https://www.prozis.com' logo='/public/prozis.png' title='Lead Frontend Developer' description='At Prozis, I led frontend development efforts within a small team, specializing in email marketing campaigns. I maintained and enhanced an internal web application using Vue 2, which was pivotal in managing communications and campaigns. My role involved developing custom HTML components for email marketing, ensuring cross-email-client compatibility and prioritizing bullet-proof rendering for consistent display across various email providers.' startDate='Apr 2023' endDate='May 2024' company='Prozis' />
+			<Experience url='https://www.vfxfinancial.com' logo='/public/vfx.png' title='Fullstack Developer' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' startDate='May 2024' endDate='Present' company='VFX Financial' />
+		</ul>
+	</main>
+	<footer class="contact-section">
+		<div class="contact-wrapper">
+			<h1>Contact</h1>
+			<p>Seasoned Full Stack Software Engineer with over 3 years of hands-on experience in designing and implementing robust, scalable, and innovative web solutions. Adept at leveraging a comprehensive skill set encompassing front-end and back-end technologies.</p>
+			<span><a href="mailto:luisribeirotech@gmail.com"><Icon name="mdi:email-outline" class="email-icon" />luisribeirotech@gmail.com</a></span>
+			<ul role="list" style="padding: 0;">
+				<Social icon='bxl:instagram' href='https://www.instagram.com/sirluisdealvalade' />
+				<Social icon='bxl:github' href='https://www.github.com/luisleandro94' />
+				<Social icon='bxl:linkedin' href='https://www.linkedin.com/in/luisleandro94' />
+			</ul>
+		</div>
+	</footer>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: .7em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.about {
+		margin-bottom: 3rem;
+		text-align: center;
+		color: var(--secondary-text);
+	}
+	.button-container {
+		width: 100%;
+		margin: auto;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 3rem;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+		margin-bottom: 3rem;
+	}
+	.section-title {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+		font-size: 3rem;
+		margin-bottom: 3rem;
+	}
+	.contact-section {
+		background-color: #222222;
+	}
+	.contact-wrapper {
+		margin: auto;
+		padding: 5rem 1rem;
+		line-height: 1.6;
+		display: block;
+		width: 800px;
+	}
+	.contact-wrapper > h1 {
+		text-align: left;
+		font-size: 3rem;
+		color: white;
+	}
+	.contact-wrapper > p {
+		color: var(--secondary-text);
+	}
+	.contact-wrapper > span > a {
+		color: var(--secondary-text);
+		font-weight: 500;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		text-decoration: none;
+	}
+	.contact-wrapper > ul {
+		list-style: none;
+		display: flex;
+		width: 100px;
+		justify-content: space-between;
+	}
+	.section-link-list {
+		display: flex;
+		list-style: none;
+		justify-content: space-between;
+		width: 33%;
+	}
+	.section-link {
+		text-decoration: none;
+		color: white;
+		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		font-weight: 500;
+	}
+	.section-el:is(:hover, :focus-within) a {
+		color: rgb(var(--accent-light));
+	}
+	.contact-wrapper span:is(:hover, :focus-within) a {
+		color: rgb(var(--accent-light));
+	}
+	.header {
+		display: flex;
+		justify-content: space-between;
+		height: 85px;
+		background-color: #222222;
+		margin: 0;
+		align-items: center;
+		margin-bottom: 3rem;
+	}
+	.signature {
+		width: 33%;
+		height: 50%;
+		overflow: hidden;
+		position: relative;
+	}
+	.signature > img {
+		width: auto;
+		height: 100%;
+		padding-left: 3rem;
+	}
+	.email-icon {
+		margin-right: 10px;
+	}
+</style>
