@@ -44,4 +44,10 @@ const { text, type, href, action } = Astro.props;
 		background-color: rgb(var(--accent-light));
         border-color: rgb(var(--accent-light));
 	}
+
+    @media only screen and (max-width: 768px) {
+        .primary, .secondary {
+            padding: 8px 15px;
+        }
+    }
 </style>

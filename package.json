@@ -12,7 +12,9 @@
   "dependencies": {
     "@astrojs/check": "^0.8.1",
     "astro": "^4.11.5",
+    "astro-breakpoints": "^0.6.2",
     "astro-icon": "^1.1.0",
+    "scss": "^0.2.4",
     "typescript": "^5.5.3"
   },
   "devDependencies": {

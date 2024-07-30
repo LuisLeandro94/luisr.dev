@@ -5,7 +5,7 @@ import RoundImage from '../components/RoundImage.astro';
 import Button from '../components/Button.astro';
 import Experience from '../components/Experience.astro';
 import { Image } from 'astro:assets';
-import signature from '../../public/signature2.png'
+import signature from '../../public/signature.png'
 import Social from '../components/Social.astro';
 import { Icon } from 'astro-icon/components'
 ---
@@ -17,23 +17,23 @@ import { Icon } from 'astro-icon/components'
 		</div>
 		<ul role="list" class="section-link-list">
 			<li class="section-el">
-				<a href="" class="section-link">Home</a>
+				<a href="#home" class="section-link">Home</a>
 			</li>
 			<li class="section-el">
-				<a href="" class="section-link">Projects</a>
+				<a href="#projects" class="section-link">Projects</a>
 			</li>
 			<li class="section-el">
-				<a href="" class="section-link">Experience</a>
+				<a href="#experience" class="section-link">Experience</a>
 			</li>
 			<li class="section-el">
-				<a href="" class="section-link">Contact</a>
+				<a href="#contact" class="section-link">Contact</a>
 			</li>
 		</ul>
 		<div style="width: 33%;"></div>
 	</header>
 	<main>
-		<RoundImage href='https://www.linkedin.com/in/luisleandro94' image='/public/luis.JPG' description='Luis Ribeiro Github' round={true} />
-		<h1>I do code and make content <span class="text-gradient">about it!</span></h1>
+		<RoundImage href='https://www.linkedin.com/in/luisleandro94' image='/luis.JPG' description='Luis Ribeiro Github' round={true} />
+		<h1 id="home">I do code and make content <span class="text-gradient">about it!</span></h1>
 		<p class="about">
 			I am a seasoned full-stack software engineer with over 3 years of professional experience, specializing in front-end development.
 			<br />
@@ -41,38 +41,43 @@ import { Icon } from 'astro-icon/components'
 		</p>
 		<div class="button-container">
 			<Button href='https://www.github.com/luisleandro94' type='primary' text='Get in Touch' />
-			<Button href='/public/luis.JPG' action='download' type='secondary' text='Download CV' />
+			<Button href='/luis.JPG' action='download' type='secondary' text='Download CV' />
 		</div>
-		<ul role="list" class="link-card-grid">
+		<ul role="list" class="link-card-grid" id="projects">
 			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				image='/public/luis.JPG'
+				href="https://github.com/LuisLeandro94/Simpleflix-Slider"
+				title="Simpleflix Slider"
+				image='/projects/simpleflix_slider.jpg'
 			/>
 			<Card
-				href="https://astro.build/integrations/"
-				image='/public/luis.JPG'
-				title="Integrations"
+				href="https://projectile-movement.vercel.app/"
+				image='/projects/projectile_movement.png'
+				title="Projectile Movement"
 			/>
 			<Card
-				href="https://astro.build/themes/"
-				image='/public/luis.JPG'
-				title="Themes"
+				href="https://github.com/LuisLeandro94/petaway_frontend"
+				image='/projects/petaway.png'
+				title="Petaway"
 			/>
 			<Card
-				href="https://astro.build/chat/"
-				image='/public/luis.JPG'
-				title="Community"
+				href="https://github.com/LuisLeandro94/Supermarket-Management"
+				image='/projects/supermarket_management.png'
+				title="Supermarket Management CLI"
+			/>
+			<Card
+				href="https://luis-ribeiro-5rxt2owur-luisleandro94.vercel.app/"
+				image='/projects/old_portfolio.png'
+				title="Old Portfolio"
 			/>
 		</ul>
-		<h1 class="section-title">Experience</h1>
+		<h1 class="section-title" id="experience">Experience</h1>
 		<ul role="list" style="padding: 0;">
-			<Experience url='https://www.codepoint.pt' logo='/public/codepoint.png' title='Junior Fullstack Developer' description='As a Software Engineer at Codepoint, I developed and maintained frontend interfaces using React for diverse client applications. I collaborated on full-stack projects with C#, Blazor, Azure Functions, and MySQL, ensuring seamless integration between frontend and backend systems. I designed and implemented APIs to enhance application functionality. In a dynamic environment, I delivered high-quality, responsive web solutions and worked with designers on UI/UX enhancements, embracing Agile methodology for efficient project management.' startDate='Sep 2021' endDate='Mar 2023' company='Codepoint' />
-			<Experience url='https://www.prozis.com' logo='/public/prozis.png' title='Lead Frontend Developer' description='At Prozis, I led frontend development efforts within a small team, specializing in email marketing campaigns. I maintained and enhanced an internal web application using Vue 2, which was pivotal in managing communications and campaigns. My role involved developing custom HTML components for email marketing, ensuring cross-email-client compatibility and prioritizing bullet-proof rendering for consistent display across various email providers.' startDate='Apr 2023' endDate='May 2024' company='Prozis' />
-			<Experience url='https://www.vfxfinancial.com' logo='/public/vfx.png' title='Fullstack Developer' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' startDate='May 2024' endDate='Present' company='VFX Financial' />
+			<Experience url='https://www.vfxfinancial.com' logo='/vfx.png' title='Fullstack Developer' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' startDate='May 2024' endDate='Present' company='VFX Financial' />
+			<Experience url='https://www.prozis.com' logo='/prozis.png' title='Lead Frontend Developer' description='At Prozis, I led frontend development efforts within a small team, specializing in email marketing campaigns. I maintained and enhanced an internal web application using Vue 2, which was pivotal in managing communications and campaigns. My role involved developing custom HTML components for email marketing, ensuring cross-email-client compatibility and prioritizing bullet-proof rendering for consistent display across various email providers.' startDate='Apr 2023' endDate='May 2024' company='Prozis' />
+			<Experience url='https://www.codepoint.pt' logo='/codepoint.png' title='Junior Fullstack Developer' description='As a Software Engineer at Codepoint, I developed and maintained frontend interfaces using React for diverse client applications. I collaborated on full-stack projects with C#, Blazor, Azure Functions, and MySQL, ensuring seamless integration between frontend and backend systems. I designed and implemented APIs to enhance application functionality. In a dynamic environment, I delivered high-quality, responsive web solutions and worked with designers on UI/UX enhancements, embracing Agile methodology for efficient project management.' startDate='Sep 2021' endDate='Mar 2023' company='Codepoint' />
 		</ul>
 	</main>
-	<footer class="contact-section">
+	<footer class="contact-section" id="contact">
 		<div class="contact-wrapper">
 			<h1>Contact</h1>
 			<p>Seasoned Full Stack Software Engineer with over 3 years of hands-on experience in designing and implementing robust, scalable, and innovative web solutions. Adept at leveraging a comprehensive skill set encompassing front-end and back-end technologies.</p>
@@ -149,6 +154,7 @@ import { Icon } from 'astro-icon/components'
 	}
 	.contact-section {
 		background-color: #222222;
+		display: flex;
 	}
 	.contact-wrapper {
 		margin: auto;
@@ -209,7 +215,7 @@ import { Icon } from 'astro-icon/components'
 	}
 	.signature {
 		width: 33%;
-		height: 50%;
+		height: 70%;
 		overflow: hidden;
 		position: relative;
 	}
@@ -220,5 +226,22 @@ import { Icon } from 'astro-icon/components'
 	}
 	.email-icon {
 		margin-right: 10px;
+	}
+
+	@media only screen and (max-width: 768px) {
+		.header {
+			text-align: center;
+			display: block;
+		}
+		.signature {
+			width: 100%;
+			height: 100%;
+		}
+		.signature img {
+			padding: 0;
+		}
+		.section-link-list {
+			display: none;
+		}
 	}
 </style>
